@@ -83,4 +83,6 @@ for img in imgs:
     }
 
     browser.quit()
-    return mars_records
+
+
+    return USGS_Mars_scraped
