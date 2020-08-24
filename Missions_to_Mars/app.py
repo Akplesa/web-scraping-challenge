@@ -28,7 +28,7 @@ def scrape():
     USGS_Mars_scraped = mars_scraped.scrape()
 
     # Updating the Mongo database using update and upsert=True
-    mongo.db.mars_one.update({}, USGS_Mars_scraped, upsert=True)
+    mongo.db.update({}, USGS_Mars_scraped, upsert=True)
 
     # Redirecting back to home page
     return redirect("/")
