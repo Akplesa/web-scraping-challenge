@@ -8,7 +8,7 @@ import mars_scraped
 app = Flask(__name__)
 
 #Using PyMongo to establish Mongo connection
-mongo = PyMongo(app, uri="mongodb://localhost:27017/mars_app")
+mongo = PyMongo(app, uri="mongodb://localhost:27017/marsmission_app")
 
 # Routing to render index.html template using data from Mongo
 @app.route("/")
