@@ -83,4 +83,4 @@ for img in imgs:
     }
 
     browser.quit()
-    return mars_data
+    return mars_records
