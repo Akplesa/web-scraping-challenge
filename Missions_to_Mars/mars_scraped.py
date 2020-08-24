@@ -75,10 +75,10 @@ for img in imgs:
 
     #Constructing python dictionary for all of the scraped mars information
     USGS_Mars_scraped = {
-        'News title': news_title,
-        'News paragraph': news_p,
-        'Featured image url': featured_image_url,
-        'Mars facts table': html_table,
+        'News_title': news_title,
+        'News_paragraph': news_p,
+        'Featured_image_url': featured_image_url,
+        'Mars_facts_table': html_table,
         'Images': img_title_url,
     }
 

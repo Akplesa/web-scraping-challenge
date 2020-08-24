@@ -2,7 +2,7 @@
 #Importing dependencies
 from flask import Flask, render_template, redirect
 from flask_pymongo import PyMongo
-import scraper_mars
+import mars_scraped
 
 #Creating instance of  the Flask app
 app = Flask(__name__)
