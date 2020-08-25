@@ -9,8 +9,9 @@ import time
 
 # Establishing chrome driver executable path 
 def init_browser():
-    executable_path = {'executable_path':'/usr/local/bin/chromedriver'}
-    browser = Browser('chrome', **executable_path, headless=False)
+    
+    executable_path = {"executable_path": "/usr/local/bin/chromedriver"}
+    return Browser("chrome", **executable_path, headless=False)
 
 def scrape_info():
     browser = init_browser()
@@ -18,7 +19,8 @@ def scrape_info():
 #Visiting Nasa News / Scraping
     Nasa_News_url = 'https://mars.nasa.gov/news/'
     browser.visit(Nasa_News_url)
-    browser.is_element_present_by_css("ul.item_list li.slide", wait_time=1)
+    #browser.is_element_present_by_css("ul.item_list li.slide", wait-time=1)
+    time.sleep(5)
 
     html= browser.html
     news_soup = bs(html, 'html.parser')
@@ -27,7 +29,9 @@ def scrape_info():
     news_title = slide_elem.find("div", class_='content_title').get_text()
     slide_elem.find("div", class_='article_teaser_body')
     news_p = slide_elem.find("div", class_='article_teaser_body').get_text()
+    
 
+    print (news_title )
     #Visiting JPL MARS SPACE IMAGES / Scraping
     img_url = 'https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars'
     browser.visit(img_url)

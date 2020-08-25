@@ -25,10 +25,10 @@ def home():
 def scrape():
 
     # Running the scrape function
-    USGS_Mars_scraped = mars_scraped.scrape()
+    USGS_Mars_scraped = mars_scraped.scrape_info()
 
     # Updating the Mongo database using update and upsert=True
-    mongo.db.update({}, USGS_Mars_scraped, upsert=True)
+    mongo.db.mars_records.update({}, USGS_Mars_scraped, upsert=True)
 
     # Redirecting back to home page
     return redirect("/")

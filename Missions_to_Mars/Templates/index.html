@@ -21,5 +21,21 @@
     <h2>Latest Mars News </h2>
     <h3>{{ mars.News_title }}</h3>
     <h3>{{ mars.News_paragraph }}</h3>
+
+    <div class = "container">
+      <div class = "col-lg-7 com-sm-12">
+        <h2>Featured Mars Image:</h2>
+        <img src="{{mars.featured_image_url}}">
+      </div>
   </div>
-  
+  <div class="container-fluid">
+    <div class = "col-md-12">
+      <h2>Mars Hemispheres</h2>
+      {% for x in images %}
+      <img src="{{mars.img_title_url}}">
+    </div>
+    {% endfor %}
+</div>
+
+</body>
+</html>
